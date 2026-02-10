@@ -2,6 +2,7 @@ import useTheme from '../../hooks/useTheme.js'
 import styles from './LandingPage.module.css'
 
 const SIGNUP_URL = 'https://forms.gle/PLACEHOLDER'
+const WAITLIST_COUNT = 248
 
 const PROBLEMS = [
   {
@@ -93,6 +94,10 @@ export default function LandingPage() {
             Join the beta
             <span className={styles.ctaArrow}>→</span>
           </a>
+          <p className={styles.waitlist}>
+            <span className={styles.waitlistDot} />
+            <strong>{WAITLIST_COUNT.toLocaleString()}+</strong> students on the waitlist
+          </p>
         </section>
       </div>
 
