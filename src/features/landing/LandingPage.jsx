@@ -1,7 +1,7 @@
 import useTheme from '../../hooks/useTheme.js'
 import styles from './LandingPage.module.css'
 
-const SIGNUP_URL = 'https://forms.gle/PLACEHOLDER'
+const SIGNUP_URL = 'https://forms.gle/rAJw4sTQDX3MiWo27'
 const WAITLIST_COUNT = 248
 
 const PROBLEMS = [
