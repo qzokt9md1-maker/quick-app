@@ -1,4 +1,5 @@
 import styles from './App.module.css'
+import Dashboard from '../features/dashboard/Dashboard.jsx'
 
 const NAV_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', icon: 'grid' },
@@ -39,7 +40,7 @@ function App() {
 
       <main className={styles.main}>
         <div className={styles.mainGrid}>
-          <Placeholder label="Clock" />
+          <Dashboard />
           <Placeholder label="Weather" />
           <Placeholder label="Tasks" />
         </div>
