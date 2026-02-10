@@ -1,6 +1,7 @@
 import Card from '../../components/Card.jsx'
 import useClock from '../../hooks/useClock.js'
 import WeatherCard from './WeatherCard.jsx'
+import TaskList from './TaskList.jsx'
 import styles from './Dashboard.module.css'
 
 function getGreeting(hour) {
@@ -53,6 +54,7 @@ export default function Dashboard() {
     <>
       <ClockCard />
       <WeatherCard />
+      <TaskList />
       <GreetingCard />
     </>
   )

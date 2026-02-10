@@ -41,29 +41,8 @@ function App() {
       <main className={styles.main}>
         <div className={styles.mainGrid}>
           <Dashboard />
-          <Placeholder label="Tasks" />
         </div>
       </main>
-    </div>
-  )
-}
-
-function Placeholder({ label }) {
-  return (
-    <div
-      style={{
-        border: '1px dashed var(--color-border)',
-        borderRadius: 'var(--radius-md)',
-        padding: 'var(--space-xl)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'var(--color-text-muted)',
-        fontSize: '0.875rem',
-        minHeight: '180px',
-      }}
-    >
-      {label}
     </div>
   )
 }
