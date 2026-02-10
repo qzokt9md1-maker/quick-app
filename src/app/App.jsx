@@ -41,7 +41,6 @@ function App() {
       <main className={styles.main}>
         <div className={styles.mainGrid}>
           <Dashboard />
-          <Placeholder label="Weather" />
           <Placeholder label="Tasks" />
         </div>
       </main>
