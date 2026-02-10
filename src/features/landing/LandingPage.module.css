@@ -159,6 +159,25 @@
   transform: translateX(3px);
 }
 
+/* Waitlist counter */
+.waitlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.waitlistDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.5);
+}
+
 /* Sections */
 .section {
   padding: 4rem var(--space-xl);
