@@ -1,0 +1,131 @@
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-xl);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.headerTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.headerMeta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.sidebarBrand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-sm);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.navItem:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.navItemActive {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+/* Main */
+.main {
+  grid-area: main;
+  padding: var(--space-xl);
+  overflow-y: auto;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
+
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-md);
+    gap: var(--space-xs);
+  }
+
+  .sidebarBrand {
+    display: none;
+  }
+
+  .navItem {
+    white-space: nowrap;
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  .main {
+    padding: var(--space-md);
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
