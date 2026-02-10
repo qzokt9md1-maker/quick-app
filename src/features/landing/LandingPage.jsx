@@ -7,43 +7,43 @@ const WAITLIST_COUNT = 248
 const PROBLEMS = [
   {
     icon: '📚',
-    title: 'Scattered resources',
-    desc: 'Textbooks, question banks, lecture notes — all in different places with no unified plan.',
+    title: '教材がバラバラ',
+    desc: '教科書、問題集、講義ノート——全部バラバラで、統一された計画がない。',
   },
   {
     icon: '😰',
-    title: 'Exam anxiety',
-    desc: 'No clear picture of what you\'ve covered vs. what\'s left leads to constant stress.',
+    title: '試験への不安',
+    desc: 'どこまで終わって何が残っているか見えず、常にストレスを抱えてしまう。',
   },
   {
     icon: '🔄',
-    title: 'Wasted review cycles',
-    desc: 'Without spaced repetition, you re-study what you already know and forget what you don\'t.',
+    title: '無駄な復習',
+    desc: '間隔反復がないと、覚えていることを繰り返し、忘れたことを放置してしまう。',
   },
 ]
 
 const STEPS = [
   {
-    title: 'Import your syllabus',
-    desc: 'Paste your exam syllabus or curriculum. StudyPilot breaks it into topics automatically.',
+    title: 'シラバスを取り込む',
+    desc: '試験範囲やカリキュラムを貼り付けるだけ。StudyPilotが自動でトピックに分解します。',
   },
   {
-    title: 'Get your study plan',
-    desc: 'An adaptive schedule is generated based on your exam date, strengths, and weak spots.',
+    title: '学習計画を受け取る',
+    desc: '試験日・得意分野・苦手分野をもとに、適応型のスケジュールが自動生成されます。',
   },
   {
-    title: 'Track & adapt',
-    desc: 'Mark topics as done, log practice scores, and watch your plan adjust in real time.',
+    title: '進捗を記録＆調整',
+    desc: 'トピックの完了や演習スコアを記録すると、計画がリアルタイムで最適化されます。',
   },
 ]
 
 const FEATURES = [
-  { icon: '🗓', title: 'Adaptive scheduling', desc: 'Plans shift automatically when you fall behind or get ahead.' },
-  { icon: '🧠', title: 'Spaced repetition', desc: 'Built-in review prompts so high-yield topics stick long-term.' },
-  { icon: '📊', title: 'Progress dashboard', desc: 'See coverage, weak areas, and predicted readiness at a glance.' },
-  { icon: '🤝', title: 'Study groups', desc: 'Share plans with classmates and keep each other accountable.' },
-  { icon: '🎯', title: 'Question bank sync', desc: 'Link your QBank and auto-track which topics you\'ve practiced.' },
-  { icon: '📱', title: 'Mobile-first', desc: 'Review your plan and log progress from anywhere.' },
+  { icon: '🗓', title: '適応型スケジュール', desc: '遅れても進みすぎても、計画が自動で調整されます。' },
+  { icon: '🧠', title: '間隔反復', desc: '最適なタイミングで復習を促し、重要トピックを長期記憶に定着させます。' },
+  { icon: '📊', title: '進捗ダッシュボード', desc: 'カバー率・苦手分野・合格予測をひと目で確認できます。' },
+  { icon: '🤝', title: 'スタディグループ', desc: '仲間と計画を共有して、お互いの学習をサポートできます。' },
+  { icon: '🎯', title: '問題集との連携', desc: '問題集を紐づけて、どのトピックを演習済みか自動で追跡します。' },
+  { icon: '📱', title: 'モバイル対応', desc: 'どこからでも計画の確認や進捗の記録ができます。' },
 ]
 
 const FAQS = [
@@ -103,34 +103,34 @@ export default function LandingPage() {
       {/* Hero */}
       <div className={styles.heroWrapper}>
         <section className={styles.hero}>
-          <span className={styles.badge}>Beta — Free for early users</span>
+          <span className={styles.badge}>β版 — 先行ユーザーは無料</span>
           <h1 className={styles.heroTitle}>
-            The exam planning OS{' '}
-            <span className={styles.heroTitleHighlight}>for medical students</span>
+            医学生のための{' '}
+            <span className={styles.heroTitleHighlight}>試験対策OS</span>
           </h1>
           <p className={styles.heroSub}>
-            StudyPilot turns your syllabus into an adaptive study plan so you
-            cover every topic, review at the right time, and walk into exams
-            confident.
+            StudyPilotはシラバスから適応型の学習計画を自動作成。
+            すべてのトピックをカバーし、最適なタイミングで復習し、
+            自信を持って試験に臨めます。
           </p>
           <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className={styles.cta}>
-            Join the beta
+            β版に登録する
             <span className={styles.ctaArrow}>→</span>
           </a>
           <p className={styles.waitlist}>
             <span className={styles.waitlistDot} />
-            <strong>{WAITLIST_COUNT.toLocaleString()}+</strong> students on the waitlist
+            <strong>{WAITLIST_COUNT.toLocaleString()}+</strong> 人がウェイトリストに登録済み
           </p>
         </section>
       </div>
 
       {/* Problem */}
       <section className={styles.section}>
-        <p className={styles.sectionLabel}>The problem</p>
-        <h2 className={styles.sectionTitle}>Studying for boards shouldn't feel like guesswork</h2>
+        <p className={styles.sectionLabel}>課題</p>
+        <h2 className={styles.sectionTitle}>試験勉強が「勘頼み」になっていませんか？</h2>
         <p className={styles.sectionDesc}>
-          Most medical students rely on spreadsheets or gut feeling to plan
-          their studying. It doesn't scale.
+          多くの医学生がスプレッドシートや感覚で学習計画を立てています。
+          それでは科目が増えるほど破綻します。
         </p>
         <div className={styles.problemGrid}>
           {PROBLEMS.map((p) => (
@@ -145,8 +145,8 @@ export default function LandingPage() {
 
       {/* How it works */}
       <section className={styles.section}>
-        <p className={styles.sectionLabel}>How it works</p>
-        <h2 className={styles.sectionTitle}>Three steps to a smarter study plan</h2>
+        <p className={styles.sectionLabel}>使い方</p>
+        <h2 className={styles.sectionTitle}>3ステップでスマートな学習計画を</h2>
         <div className={styles.steps}>
           {STEPS.map((s, i) => (
             <div key={s.title} className={styles.step}>
@@ -160,8 +160,8 @@ export default function LandingPage() {
 
       {/* Features */}
       <section className={styles.section}>
-        <p className={styles.sectionLabel}>Features</p>
-        <h2 className={styles.sectionTitle}>Everything you need, nothing you don't</h2>
+        <p className={styles.sectionLabel}>機能</p>
+        <h2 className={styles.sectionTitle}>必要なものだけ、過不足なく</h2>
         <div className={styles.features}>
           {FEATURES.map((f) => (
             <div key={f.title} className={styles.feature}>
@@ -191,20 +191,20 @@ export default function LandingPage() {
 
       {/* Bottom CTA */}
       <section className={styles.ctaSection}>
-        <h2 className={styles.ctaSectionTitle}>Ready to study smarter?</h2>
+        <h2 className={styles.ctaSectionTitle}>もっと賢く勉強しませんか？</h2>
         <p className={styles.ctaSectionDesc}>
-          Sign up for the beta and be the first to get access. It's free while
-          we're in early access.
+          β版に登録して、いち早くアクセスを手に入れましょう。
+          先行ユーザーは無料でご利用いただけます。
         </p>
         <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className={styles.cta}>
-          Sign up for free
+          無料で登録する
           <span className={styles.ctaArrow}>→</span>
         </a>
       </section>
 
       {/* Footer */}
       <footer className={styles.footer}>
-        &copy; {new Date().getFullYear()} StudyPilot. Built for medical students, by medical students.
+        &copy; {new Date().getFullYear()} StudyPilot — 医学生による、医学生のためのサービス
       </footer>
     </div>
   )
