@@ -17,6 +17,8 @@
   padding: var(--space-md) var(--space-xl);
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-surface);
+  transition: background-color var(--transition-normal),
+              border-color var(--transition-normal);
 }
 
 .headerTitle {
@@ -25,9 +27,41 @@
   letter-spacing: -0.01em;
 }
 
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
 .headerMeta {
   font-size: 0.8125rem;
   color: var(--color-text-muted);
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 1.125rem;
+  line-height: 1;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.themeToggle:hover {
+  background-color: var(--color-surface-hover);
+  transform: scale(1.05);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
 }
 
 /* Sidebar */
@@ -39,6 +73,8 @@
   padding: var(--space-lg);
   border-right: 1px solid var(--color-border);
   background-color: var(--color-surface);
+  transition: background-color var(--transition-normal),
+              border-color var(--transition-normal);
 }
 
 .sidebarBrand {
