@@ -77,21 +77,24 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className={styles.hero}>
-        <span className={styles.badge}>Beta — Free for early users</span>
-        <h1 className={styles.heroTitle}>
-          The exam planning OS for medical students
-        </h1>
-        <p className={styles.heroSub}>
-          StudyPilot turns your syllabus into an adaptive study plan so you
-          cover every topic, review at the right time, and walk into exams
-          confident.
-        </p>
-        <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className={styles.cta}>
-          Join the beta
-          <span className={styles.ctaArrow}>→</span>
-        </a>
-      </section>
+      <div className={styles.heroWrapper}>
+        <section className={styles.hero}>
+          <span className={styles.badge}>Beta — Free for early users</span>
+          <h1 className={styles.heroTitle}>
+            The exam planning OS{' '}
+            <span className={styles.heroTitleHighlight}>for medical students</span>
+          </h1>
+          <p className={styles.heroSub}>
+            StudyPilot turns your syllabus into an adaptive study plan so you
+            cover every topic, review at the right time, and walk into exams
+            confident.
+          </p>
+          <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer" className={styles.cta}>
+            Join the beta
+            <span className={styles.ctaArrow}>→</span>
+          </a>
+        </section>
+      </div>
 
       {/* Problem */}
       <section className={styles.section}>
